@@ -1,4 +1,4 @@
-FROM maven:3.8.2-jdk-11 AS build
+FROM gradle:4.7.0-jdk8-alpine AS build
 COPY . .
 RUN mvn clean package -Pprod -DskipTests
 
